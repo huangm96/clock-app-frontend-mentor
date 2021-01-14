@@ -1,0 +1,18 @@
+.Main{
+    height:calc(100vh - 60px);
+    padding:30px 8%;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Bottom-container {
+    display: flex;    
+    justify-content: space-between;
+}
+.Main-day{
+    background-image: url("../../assets/desktop/bg-image-daytime.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left top;
+}
