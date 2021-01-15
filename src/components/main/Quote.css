@@ -1,0 +1,20 @@
+.Quote{
+    display:flex;
+    
+}
+
+.QuoteContent{
+    width:50%;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.author{
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.RefreshIcon{
+    margin-left: 20px;
+    cursor: pointer;
+}
