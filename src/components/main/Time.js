@@ -6,21 +6,21 @@ import "./Time.css";
 
 function Time() {
   const [state, dispatch] = useReducer(reducer, initialState);
-  useEffect(() => {
-    getTime()
-  },[])
-  const getTime = () => {
-    Axios.get("https://freegeoip.app/json/", {
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => {
-        console.log(res);
-      })
-      .catch();
-  };
+  // useEffect(() => {
+  //   getTime()
+  // },[])
+  // const getTime = () => {
+  //   Axios.get("https://freegeoip.app/json/", {
+  //     headers: {
+  //       "Access-Control-Allow-Origin": "*",
+  //       "Content-Type": "application/json",
+  //     },
+  //   })
+  //     .then((res) => {
+  //       console.log(res);
+  //     })
+  //     .catch();
+  // };
 
   return (
     <div className="Time">
