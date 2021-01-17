@@ -14,7 +14,6 @@ function Quote() {
     });
     Axios.get("https://api.quotable.io/random")
       .then((res) => {
-        console.log(res);
         dispatch({
           type: "getQuoteSuccess",
           payload: { content: res.data.content, author: res.data.author },
