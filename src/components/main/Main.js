@@ -10,8 +10,11 @@ import Button from "./Button.js";
 import Lottie from "react-lottie";
 import Loading from "../../assets/loading.json";
 function Main() {
+
   const [up, setUp] = useState(false);
   const [state, dispatch] = useReducer(reducer, initialState);
+
+  // lottie loading json setting
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -20,7 +23,10 @@ function Main() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
   useEffect(() => {
+
+    // if got time from api, add 1 second in every second
     const interval = setInterval(() => {
       if (state.time) {
         dispatch({
@@ -31,10 +37,12 @@ function Main() {
     return () => clearInterval(interval);
   }, [state.time]);
 
+  // get time and location when page start
   useEffect(() => {
     getTime();
   }, []);
 
+  // get time and location function
   const getTime = () => {
     Axios.get("https://worldtimeapi.org/api/ip/")
       .then((time) => {
@@ -77,6 +85,7 @@ function Main() {
   
   return (
     <div>
+      {/* if no time return loading json */}
       {state.time ? (
         <div>
           <div
@@ -84,6 +93,7 @@ function Main() {
               state.greeting === "GOOD EVENING" ? "Main-night" : "Main-day"
             }`}
           >
+            {/* if more button is clicked, hide quote section */}
             {up ? null : <Quote />}
 
             <div className="Bottom-container">
@@ -97,6 +107,7 @@ function Main() {
               <Button up={up} setUp={setUp} />
             </div>
           </div>
+          {/* if more button is clicked, show more info section */}
           {up ? (
             <Info
               timeZone={state.timeZone}
@@ -107,6 +118,7 @@ function Main() {
           ) : null}
         </div>
       ) : (
+          // lottie loading json
         <div style={{ height: "100vh", display: "flex", alignItems: "center" }}>
           <Lottie options={defaultOptions} height="25vw" width="25vw" />
         </div>

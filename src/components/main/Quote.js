@@ -5,9 +5,11 @@ import { initialState, reducer } from "../utility/Reducer";
 import refreshIcon from "../../assets/desktop/icon-refresh.svg";
 function Quote() {
   const [state, dispatch] = useReducer(reducer, initialState);
+
   useEffect(() => {
     getQuote();
   }, []);
+// getQuote function
   const getQuote = () => {
     dispatch({
       type: "getQuoteStart",
