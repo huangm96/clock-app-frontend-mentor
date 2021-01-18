@@ -29,10 +29,10 @@ function Main() {
 
   const getTime = () => {
     Axios.get(
-      "https://cors-anywhere.herokuapp.com/" + "http://worldtimeapi.org/api/ip/"
+      "http://worldtimeapi.org/api/ip/"
     )
       .then((time) => {
-        // console.log(time);
+         console.log(time);
 
         dispatch({
           type: "getTimeSuccess",
@@ -50,7 +50,7 @@ function Main() {
             `https://freegeoip.app/json/${time.data.client_ip}`
         )
           .then((loc) => {
-            // console.log(loc);
+            console.log(loc);
             dispatch({
               type: "getLocationSuccess",
               payload: {
