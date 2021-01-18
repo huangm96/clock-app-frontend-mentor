@@ -35,4 +35,18 @@
 @media (max-width: 1024px) {}
 
 /* phone */
-@media (max-width: 500px) {}
+@media (max-width: 500px) {
+    .Greeting-content {
+        word-spacing: normal;
+        font-size: 1rem;  
+    }
+    .Current-time {
+        font-size: 5rem;
+    }
+    .Abbreviation {
+        font-weight: 200;
+        font-size: 2rem;
+        margin-left: 25px;
+        margin-bottom: 20px;
+    }
+}

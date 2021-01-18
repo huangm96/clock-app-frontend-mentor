@@ -63,6 +63,10 @@
     .Main {
         padding: 0 24px;
     }
+    .Main-part {
+        height: calc(45vh - 30px);
+
+    }
     .Main-day {
         background-image: url("../../assets/mobile/bg-image-daytime.jpg");
     

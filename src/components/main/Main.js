@@ -28,7 +28,9 @@ function Main() {
   }, []);
 
   const getTime = () => {
-    Axios.get("http://worldtimeapi.org/api/ip/")
+    Axios.get(
+      "https://cors-anywhere.herokuapp.com/" + "http://worldtimeapi.org/api/ip/"
+    )
       .then((time) => {
         // console.log(time);
 
@@ -70,7 +72,7 @@ function Main() {
     <div>
       <div
         className={`Main ${up ? "Main-part" : "Main-whole"} ${
-          state.greeting == "GOOD EVENING" ? "Main-night" : "Main-day"
+          state.greeting === "GOOD EVENING" ? "Main-night" : "Main-day"
         }`}
       >
         {up ? null : <Quote />}
