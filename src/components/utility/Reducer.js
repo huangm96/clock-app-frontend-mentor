@@ -43,7 +43,7 @@ function reducer(state, action) {
       } else {
           state.greeting = "GOOD EVENING";
           }
-          console.log(action.payload);
+        //   console.log(action.payload);
       return {
         ...state,
         time: action.payload.time,
