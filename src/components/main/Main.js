@@ -7,11 +7,19 @@ import Info from "../info/Info.js";
 import Quote from "./Quote.js";
 import Time from "./Time.js";
 import Button from "./Button.js";
-
+import Lottie from "react-lottie";
+import Loading from "../../assets/loading.json";
 function Main() {
   const [up, setUp] = useState(false);
   const [state, dispatch] = useReducer(reducer, initialState);
-
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: Loading,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
   useEffect(() => {
     const interval = setInterval(() => {
       if (state.time) {
@@ -28,9 +36,7 @@ function Main() {
   }, []);
 
   const getTime = () => {
-    Axios.get(
-      "https://worldtimeapi.org/api/ip/"
-    )
+    Axios.get("https://worldtimeapi.org/api/ip/")
       .then((time) => {
         //  console.log(time);
 
@@ -68,33 +74,43 @@ function Main() {
         console.log("time api error", err);
       });
   };
+  
   return (
     <div>
-      <div
-        className={`Main ${up ? "Main-part" : "Main-whole"} ${
-          state.greeting === "GOOD EVENING" ? "Main-night" : "Main-day"
-        }`}
-      >
-        {up ? null : <Quote />}
-        {state.time?<div className="Bottom-container">
-          <Time
-            time={state.time}
-            greeting={state.greeting}
-            abbreviation={state.abbreviation}
-            city={state.city}
-            country={state.country}
-          />
-          <Button up={up} setUp={setUp} />
-        </div>:null}
-      </div>
-      {up ? (
-        <Info
-          timeZone={state.timeZone}
-          dayOfWeek={state.dayOfWeek}
-          dayOfYear={state.dayOfYear}
-          weekNum={state.weekNum}
-        />
-      ) : null}
+      {state.time ? (
+        <div>
+          <div
+            className={`Main ${up ? "Main-part" : "Main-whole"} ${
+              state.greeting === "GOOD EVENING" ? "Main-night" : "Main-day"
+            }`}
+          >
+            {up ? null : <Quote />}
+
+            <div className="Bottom-container">
+              <Time
+                time={state.time}
+                greeting={state.greeting}
+                abbreviation={state.abbreviation}
+                city={state.city}
+                country={state.country}
+              />
+              <Button up={up} setUp={setUp} />
+            </div>
+          </div>
+          {up ? (
+            <Info
+              timeZone={state.timeZone}
+              dayOfWeek={state.dayOfWeek}
+              dayOfYear={state.dayOfYear}
+              weekNum={state.weekNum}
+            />
+          ) : null}
+        </div>
+      ) : (
+        <div style={{ height: "100vh", display: "flex", alignItems: "center" }}>
+          <Lottie options={defaultOptions} height="25vw" width="25vw" />
+        </div>
+      )}
     </div>
   );
 }
