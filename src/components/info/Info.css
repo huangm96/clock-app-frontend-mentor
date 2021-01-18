@@ -1,0 +1,18 @@
+.Detail-info{
+    display: flex;
+    height:calc(50vh - 30px);
+}
+.Content{
+    
+    width:50%;
+    padding:0 8%;
+    margin: 3% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Right-Content{
+    border-left: 1px solid lightgrey;
+}
+

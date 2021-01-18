@@ -1,0 +1,22 @@
+.Button-box{
+    width:90px;
+    height:35px;
+    background-color: white;
+    border-radius: 50px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 5px;
+    cursor: pointer;
+
+    color:grey;
+    font-weight: 600;
+
+}
+
+.Ball{
+    width:30px;
+    height:30px;
+}

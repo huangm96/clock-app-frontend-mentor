@@ -1,5 +1,14 @@
-.Greeting{
+.Greeting-Box {
+    
+    margin-bottom: 10px;
+    display: flex;
+
+}
+.Greeting-content{
     font-weight: 200;
+    word-spacing: 5px;
+    font-size: 1.5rem;
+    margin-left: 15px;
 }
 .TimeBox{
     display:flex;

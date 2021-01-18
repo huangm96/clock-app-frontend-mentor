@@ -1,5 +1,5 @@
 .Main{
-    height:calc(100vh - 60px);
+    
     padding:30px 8%;
     color:white;
     display: flex;
@@ -7,6 +7,13 @@
     justify-content: space-between;
     background-color: rgb(211, 211, 211);
     background-blend-mode: multiply;
+}
+.Main-whole {
+    height:calc(100vh - 60px);
+}
+.Main-part{
+    height:calc(50vh - 30px);
+    justify-content: flex-end;
 }
 .Bottom-container {
     display: flex;    
@@ -17,6 +24,14 @@
 .Main-day{
     
     background-image: url("../../assets/desktop/bg-image-daytime.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+.Main-night {
+
+    background-image: url("../../assets/desktop/bg-image-nighttime.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left top;
