@@ -36,3 +36,26 @@
     background-repeat: no-repeat;
     background-position: left top;
 }
+
+/* tablet */
+@media (max-width: 1024px) {
+    .Main-part {
+        height: calc(60vh - 30px);
+        
+    }
+    .Main-day {
+        background-image: url("../../assets/tablet/bg-image-daytime.jpg");
+    }
+
+    .Main-night {
+        background-image: url("../../assets/tablet/bg-image-nighttime.jpg");
+    }
+    .Bottom-container {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 80px;
+    }
+}
+
+/* phone */
+@media (max-width: 500px) {}

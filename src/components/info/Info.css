@@ -9,10 +9,20 @@
     margin: 3% 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .Right-Content{
     border-left: 1px solid lightgrey;
 }
 
+/* tablet */
+@media (max-width: 1024px) {
+    .Detail-info {
+        height: calc(40vh - 30px);
+    }
+
+}
+
+/* phone */
+@media (max-width: 500px) {}

@@ -74,7 +74,7 @@ function Main() {
         }`}
       >
         {up ? null : <Quote />}
-        <div className="Bottom-container">
+        {state.time?<div className="Bottom-container">
           <Time
             time={state.time}
             greeting={state.greeting}
@@ -83,7 +83,7 @@ function Main() {
             country={state.country}
           />
           <Button up={up} setUp={setUp} />
-        </div>
+        </div>:null}
       </div>
       {up ? (
         <Info

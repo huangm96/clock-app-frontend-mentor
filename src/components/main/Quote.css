@@ -18,3 +18,14 @@
     margin-left: 20px;
     cursor: pointer;
 }
+
+/* tablet */
+@media (max-width: 1024px) {
+    .Quote {
+       margin-top: 50px;
+
+    }
+}
+
+/* phone */
+@media (max-width: 500px) {}

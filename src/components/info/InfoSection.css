@@ -10,3 +10,15 @@
     font-weight: 600;
     margin-bottom: 20px;
 }
+.InfoSection {
+    margin: 50px 0px;
+}
+/* tablet */
+@media (max-width: 1024px){
+    .InfoSection{
+        margin: 50px 0px;
+    }
+}
+
+/* phone */
+@media (max-width: 500px) {}

@@ -23,7 +23,6 @@ function reducer(state, action) {
         author: null,
       };
     case "getQuoteSuccess":
-      console.log(action.payload);
       return {
         ...state,
         quote: `"${action.payload.content}"`,
@@ -43,12 +42,13 @@ function reducer(state, action) {
           state.greeting = "GOOD AFTERNOON";
       } else {
           state.greeting = "GOOD EVENING";
-      }
+          }
+          console.log(action.payload);
       return {
         ...state,
         time: action.payload.time,
         abbreviation: action.payload.abbreviation,
-        dayOfWeek: action.payload.dayOfWeek,
+        dayOfWeek: action.payload.dayOfWeek+1,
         dayOfYear: action.payload.dayOfYear,
         weekNum: action.payload.weekNum,
       };
