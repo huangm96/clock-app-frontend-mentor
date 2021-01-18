@@ -29,7 +29,7 @@ function Main() {
 
   const getTime = () => {
     Axios.get(
-      "http://worldtimeapi.org/api/ip/"
+      "https://cors-anywhere.herokuapp.com/http://worldtimeapi.org/api/ip/"
     )
       .then((time) => {
         //  console.log(time);
