@@ -39,6 +39,7 @@
 
 /* tablet */
 @media (max-width: 1024px) {
+    
     .Main-part {
         height: calc(60vh - 30px);
         
@@ -58,4 +59,19 @@
 }
 
 /* phone */
-@media (max-width: 500px) {}
+@media (max-width: 500px) {
+    .Main {
+        padding: 0 24px;
+    }
+    .Main-day {
+        background-image: url("../../assets/mobile/bg-image-daytime.jpg");
+    
+    }
+
+    .Main-night {
+        background-image: url("../../assets/mobile/bg-image-nighttime.jpg");
+    }
+    .Bottom-container {
+        margin-bottom: 30px;
+    }
+}

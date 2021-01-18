@@ -25,7 +25,16 @@
        margin-top: 50px;
 
     }
+    .QuoteContent {
+        width: 90%;
+        
+    }
 }
 
 /* phone */
-@media (max-width: 500px) {}
+@media (max-width: 500px) {
+    .Quote {
+        margin-top: 24px;
+
+    }
+}
