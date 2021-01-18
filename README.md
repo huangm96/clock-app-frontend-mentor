@@ -8,7 +8,7 @@ https://clock-app-frontend-mentor.netlify.app/
 
 ## Full Stack Skills:
 - HTML/CSS
-- reactjs
+- react
 - axios
 
 ## App Features
